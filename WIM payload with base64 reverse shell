@@ -1,6 +1,7 @@
-#username = prvilege user
+#username = privileged user
 #password = the user password
 #new-cimsession = target domain
+#command = encoded  wim.py
 
 
 $username = 'admin';
